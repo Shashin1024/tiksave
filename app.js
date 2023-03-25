@@ -28,6 +28,6 @@ app.post('/tiktok', (req, res) => {
     });
 });
 
-app.listen(port, () => {
+app.listen(process.env.port, () => {
   console.log(`Server listening on port ${port}`);
 });
