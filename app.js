@@ -8,7 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: "http://localhost:80",
+  origin: "*",
 }));
 
 app.post('/tiktok', (req, res) => {
