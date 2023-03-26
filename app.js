@@ -19,9 +19,9 @@ app.get('/tiktokk', (req, res) => {
       tiktok.tiklydown(url),
       tiktok.dlpanda(slider_url),
     ])
-      .then(([tiklydownResult, dlpandaResult]) => {
-        res.json({ tiklydownResult, dlpandaResult });
-        console.log({ tiklydownResult, dlpandaResult });
+      .then(([tiklydownResult]) => {
+        res.json({ tiklydownResult });
+        console.log({ tiklydownResult });
       })
       .catch((e) => {
         console.log(e);
@@ -37,10 +37,10 @@ app.post('/tiktok', (req, res) => {
 
   Promise.all([
     tiktok.tiklydown(url),
-    tiktok.dlpanda(slider_url),
+   
   ])
-    .then(([tiklydownResult, dlpandaResult]) => {
-      res.json({ tiklydownResult, dlpandaResult });
+    .then(([tiklydownResult]) => {
+      res.json({ tiklydownResult});
     })
     .catch((e) => {
       console.log(e);
