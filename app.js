@@ -12,7 +12,7 @@ app.use(cors({
 }));
 
 app.post('/tiktok', (req, res) => {
-  const url = (req.body.url).toString();
+  const url = "https://www.tiktok.com/@__kaviii.girl__/video/7195959183362116891?is_from_webapp=1&sender_device=pc";
   const slider_url = 'https://vt.tiktok.com/ZS8e1HeEs/';
 
   Promise.all([
@@ -21,6 +21,7 @@ app.post('/tiktok', (req, res) => {
   ])
     .then(([tiklydownResult, dlpandaResult]) => {
       res.json({ tiklydownResult, dlpandaResult });
+      console.log({ tiklydownResult, dlpandaResult });
     })
     .catch((e) => {
       console.log(e);
