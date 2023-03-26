@@ -25,7 +25,8 @@ app.get('/tiktokk', (req, res) => {
       })
       .catch((e) => {
         console.log(e);
-        res.status(500).send('An error occurred');
+        res.status(200).send(e);
+        //res.status(500).send('An error occurred');
       });
   });
 
